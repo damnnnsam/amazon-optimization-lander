@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {
+    // Ensure the app directory is treated as the workspace root (avoids lockfile inference warnings)
+    root: __dirname,
+  },
 };
 
 export default nextConfig;
